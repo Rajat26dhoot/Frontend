@@ -2,14 +2,14 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
 
-const API_BASE_URL = 'https://backendn-1.onrender.com';
-
+const API_BASE_URL = 'https://backendn-2.onrender.com';
+// NOTE: Update this to the correct backend URL when deploying
 function App() {
   const [notes, setNotes] = useState([]);
   const [selectedNote, setSelectedNote] = useState(null);
   const [isEditing, setIsEditing] = useState(false);
   const [formData, setFormData] = useState({ title: '', content: '' });
-
+  
   useEffect(() => {
     fetchNotes();
   }, []);
